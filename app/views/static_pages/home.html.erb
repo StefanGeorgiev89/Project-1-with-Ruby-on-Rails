@@ -1,0 +1,119 @@
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+<!--   <div id='ticfirst'>
+    <h1>Tic Tac Toe</h1>
+  </div> -->
+ <br>
+</div>
+<div class="imgB">
+<% if logged_in? %>
+<%= link_to "Games", 'gamesone', method: :get , class: "btn btn-lg btn-primary" %>
+<%= link_to "Games Multiplayer", welcome_path , method: :get, class: "btn btn-lg btn btn-info " %>
+<% else %>
+<div class="imgA">
+<%= link_to "Sign up", signup_path, method: :get , class: "btn btn-lg btn btn-success" %></div>
+<% end %>
+ <!-- <%= image_tag("intro.jpg") %>  -->
+ </div>
+ <!--tuk -->
+
+<!-- <br><br>
+<iframe id="iframe" width="560" height="315" src="https://www.youtube.com/embed/WUX0hB1u0vE" frameborder="0" allowfullscreen></iframe>
+  <div class="supporting">
+      <div class="container">
+        <h2>A world of games at your fingertips.</h2>
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div class="thumbnail">
+            <%= image_tag("1468.jpg") %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="thumbnail">
+            <%= image_tag("7.jpg") %>
+            
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+    
+              <%= image_tag("4.jpg") %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <%= image_tag("222.jpg") %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <%= image_tag("4a.jpg") %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+    
+              <%= image_tag("122.jpg") %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <%= image_tag("9uf.jpg") %>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <%= image_tag("intro1.jpg") %>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+         
+              <%= image_tag("122.jpg") %>
+            </div>
+          </div> -->
+        <!--   <div class="col-md-4">
+            <div class="thumbnail">
+        
+              <%= image_tag("2.jpg") %>
+            </div>
+          </div> -->
+         <!--  <div class="col-md-4">
+            <div class="thumbnail">
+             
+              <%= image_tag("9.jpg") %>
+            </div>
+          </div> -->
+      <!--     <div class="col-md-4">
+            <div class="thumbnail">
+             
+              <%= image_tag("1.jpg") %>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div> 
+ <!-- do tuk -->
+ <div class="feature">
+      <div class="container">
+        <!-- <h1>Mobile version</h1> -->
+        <p></p>
+      </div>
+    </div> 
+  </body>
+</html>

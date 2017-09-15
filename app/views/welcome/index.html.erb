@@ -1,0 +1,61 @@
+<body id="multback">
+<h1 class="header1">Tic Tac Toe - Multiplayer</h1>
+<h3 class="header">You play one against another</h3>
+<div id="mainButtons">
+  <button class="btn btn-lg btn-primary mainButton" onclick="startNewGame()">New game</button><button class="btn btn-lg btn-info mainButton" onclick="revealP()">Join game</button>
+  <p id="gameIDInputP"><input id="gameIDInput" type="text" class="form-control mainInput" placeholder="Game ID"><button class="btn btn-info goButton" onclick="joinGame()">Go</button></p>
+
+</div>
+
+</body>
+
+
+<div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div id="game-body" class="modal-body">
+        <p>Please choose a piece:</p>
+        <p><span id="os"class="gamePiece" onclick="choosePiece('O')">O</span><span id="xs"class="gamePiece" onclick="choosePiece('X')">X</span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="stopGame()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="gameBoardTemplate">
+  <div id="gameBoardTemplate2">
+  <p id="status"></p>
+  <table>
+  <tr><td id="0" class="gameBoardSpace" onclick="clicked('0')"></td><td id="1" class="gameBoardSpace" onclick="clicked('1')"></td><td  id="2" class="gameBoardSpace" onclick="clicked('2')"></td></tr>
+  <tr><td id="3"  class="gameBoardSpace" onclick="clicked('3')"></td><td id="4"  class="gameBoardSpace" onclick="clicked('4')"></td><td id="5"  class="gameBoardSpace" onclick="clicked('5')"></td></tr>
+  <tr><td id="6"  class="gameBoardSpace" onclick="clicked('6')"></td><td id="7"  class="gameBoardSpace" onclick="clicked('7')"></td><td id="8"  class="gameBoardSpace" onclick="clicked('8')"></td></tr>
+  </table>
+  </div>
+</div>
+
+
+<div class="modal fade" id="gameWonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div id="game-won" class="modal-body">
+        <p>Game Over. The winner is: </p>
+        <p id="game-winner"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="stopGame()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
