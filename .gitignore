@@ -16,11 +16,11 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-/.img
-/.jpg
-/.png
-/schema.rb
-/seeds.rb
+/assets/images/.img
+/assets/images/.jpg
+/assets/images/.png
+/db/schema.rb
+/db/seeds.rb
 /node_modules
 /yarn-error.log
 
